@@ -18,7 +18,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav  mx-auto ">
+          <ul style="padding: 0;" class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'home' %}">Home </a>
             </li>
@@ -90,7 +90,7 @@
                 </g>
               </svg>
             </a>
-            <form class="form-inline" style="display: flex;">
+            <!-- <form class="{% url 'search' %}" style="display: flex;">
               <input type="text">
               <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                
@@ -100,7 +100,20 @@
               
                 <i class="fa fa-search" style="color: white;" aria-hidden="true"> </i>
               </button> 
-            </form> 
+            </form>  -->
+
+            <form action="{% url 'search' %}" class="search" method="get">
+              <div class="input-group w-100">
+                  <input type="text" class="form-control" placeholder="Search"
+                      name="keyword">
+          
+                  <div class="input-group-append">
+                      <button class="btn btn-warning" type="submit">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </div>
+              </div>
+          </form>
             <a href="" class="order_online">
               Order Online
             </a>

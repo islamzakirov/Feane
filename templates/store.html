@@ -9,7 +9,7 @@
     </div>
 
     <ul class="filters_menu">
-      <a href="{% url 'store' %}"><li class="active" data-filter="*">All</li></a>
+      <a href="{% url 'store' %}"><li  data-filter="*">All</li></a>
       {% for category in categories %}
      <a href="{{category.get_url}}"> <li data-filter=".burger">{{category.name}}</li></a>
       {% endfor %}
