@@ -43,7 +43,7 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{% url 'home' %}">
             <span>
               Feane
             </span>
@@ -73,7 +73,8 @@
               <a href="" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
-              <a class="cart_link" href="{% url 'card' %}">
+              <!-- <a class="cart_link" href="{% url 'card' %}">
+                
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
                     <g>
@@ -126,7 +127,7 @@
                   <g>
                   </g>
                 </svg>
-              </a>
+              </a> -->
               <!-- <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
@@ -141,17 +142,27 @@
                         <button class="btn btn-warning" type="submit">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
                 </div>
+                
             </form>
-              <a href="" class="order_online">
+              <a href="{% url 'book' %}" class="order_online">
                 Order Online
               </a>
+
+              <!-- karzinka bosish -->
+              <!-- <a href="{% url 'card' %}" class="widget-header pl-3 ml-3">
+                <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
+                <span class="badge badge-pill badge-danger notify">0</span>
+              </a> -->
             </div>
           </div>
         </nav>
       </div>
+      
     </header>
+    
     <!-- end header section -->
   </div>
 
@@ -373,7 +384,8 @@ $(document).ready(function() {
 			<p class="text-center mb-3">
 				<img src="{% static './images/f9.png' %}" height="26">
 			</p>
-			<a href="./place-order.html" class="btn btn-secondary btn-block"> Checkout </a>
+			<a href="{% url 'book' %}" class="btn btn-secondary btn-block"> 
+        To order </a>
 			<a href="{% url 'store' %}" class="btn btn-light btn-block">Continue Shopping</a>
 		</div> <!-- card-body.// -->
 		</div> <!-- card.// -->

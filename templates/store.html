@@ -9,9 +9,9 @@
     </div>
 
     <ul class="filters_menu">
-      <a href="{% url 'store' %}"><li  data-filter="*">All</li></a>
+      <a href="{% url 'store' %}" style="color: black;"><li  data-filter="*">All</li></a>
       {% for category in categories %}
-     <a href="{{category.get_url}}"> <li data-filter=".burger">{{category.name}}</li></a>
+     <a href="{{category.get_url}}" style="color: black;"> <li data-filter=".burger">{{category.name}}</li></a>
       {% endfor %}
     </ul>
 
@@ -114,25 +114,25 @@
 
 <nav class="mt-4" aria-label="Page navigation sample">
   {% if products.has_other_pages %}
-  <ul class="pagination">
+  <ul class="pagination" style="color: black;">
       {% if products.has_previous %}
       <li class="page-item"><a class="page-link"
-              href="?page={{products.previous_page_number}}">Previous</a></li>
+              href="?page={{products.previous_page_number}}" style="color: black;">Previous</a></li>
       {% else %}
-      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item disabled" ><a style="color: black;" class="page-link" href="#">Previous</a></li>
       {% endif %}
       {% for i in products.paginator.page_range %}
       {% if products.number == i %}
-      <li class="page-item active"><a class="page-link" href="#">{{i}}</a></li>
+      <li class="page-item active" ><a style="color: black;" class="page-link" href="#">{{i}}</a></li>
       {% else %}
-      <li class="page-item "><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+      <li class="page-item " ><a style="color: black;" class="page-link" href="?page={{i}}">{{i}}</a></li>
       {% endif %}
       {% endfor %}
       {% if products.has_next %}
-      <li class="page-item"><a class="page-link" href="?page={{products.next_page_number}}">Next</a>
+      <li class="page-item" ><a style="color: black;" class="page-link" href="?page={{products.next_page_number}}">Next</a>
       </li>
       {% else %}
-      <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+      <li class="page-item disabled"><a style="color: black;" class="page-link" href="#">Next</a></li>
       {% endif %}
   </ul>
   {% endif %}
